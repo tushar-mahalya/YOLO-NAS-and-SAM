@@ -21,6 +21,7 @@ class PlottingUtils:
             ax.imshow(mask_image)
             
             logging.info('Mask on a given axis in an image added succesfully !')
+            
         except Exception as e:
             raise CustomException(e,sys)
 
@@ -32,6 +33,7 @@ class PlottingUtils:
             ax.scatter(neg_points[:, 0], neg_points[:, 1], color='red', marker='*', s=marker_size, edgecolor='white', linewidth=1.25)
             
             logging.info('Points with labels on a given axis in an image added succesfully !')
+            
         except Exception as e:
             raise CustomException(e,sys)
 
@@ -42,6 +44,7 @@ class PlottingUtils:
             ax.add_patch(plt.Rectangle((x0, y0), w, h, edgecolor='green', facecolor=(0,0,0,0), lw=2))
             
             logging.info('bounding box on a given axis in an image added succesfully !')
+            
         except Exception as e:
             raise CustomException(e,sys)
 
@@ -63,5 +66,6 @@ class PlottingUtils:
                 ax.imshow(np.dstack((img, m*0.35)))
                 
             logging.info('Annotations on a plot added succesfully !')
+            
         except Exception as e:
             raise CustomException(e,sys)
